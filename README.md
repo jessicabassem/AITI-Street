@@ -10,7 +10,7 @@ The prototype simulates **20th Street in Boulaq Al-Dakror, Cairo**, representing
 The system integrates **Artificial Intelligence, IoT, material science, and mobile applications** to create a sustainable, adaptive, and efficient traffic solution.
 
 ### 🖼️ Project Overview Images
-![System Overview](images/system_overview.jpg)
+![System Overview](images/5872982136921459767.jpg)
 
 ---
 
@@ -95,8 +95,7 @@ To reduce pollution, **N-doped TiO₂** was incorporated into cement slabs.
 This allows roads to actively reduce air pollution.
 
 ### 🖼️ Material Preparation & Testing
-![TiO2 Preparation](images/tio2_preparation.jpg)
-![Pollution Testing](images/pollution_test.jpg)
+![TiO2 Preparation](images/5870730337107774257_(1).jpg)
 
 ---
 
