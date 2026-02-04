@@ -58,7 +58,6 @@ YOLOE-11S was selected for its **high accuracy, low latency, and robustness**.
 
 ### 🖼️ YOLO Detection Images
 ![YOLO Detection](images/yolo_detection.jpg)
-![YOLO Confusion Matrix](images/yolo_confusion_matrix.jpg)
 
 ---
 
@@ -70,8 +69,6 @@ When an emergency vehicle is detected:
 
 This significantly reduces emergency response time.
 
-### 🖼️ Green Corridor Demonstration
-![Green Corridor](images/green_corridor.jpg)
 
 ---
 
@@ -106,8 +103,15 @@ A Flutter-based application was developed to:
 - Reduce accidents caused by sudden weather changes  
 
 ### 🖼️ Mobile App Interface
-![Route Recommendation](images/app_route.jpg)
-![Weather Display](images/app_weather.jpg)
+
+<p align="center">
+  <img src="images/app_route.jpg" width="260" />
+  <img src="images/app_weather.jpg" width="260" />
+</p>
+
+<p align="center">
+  <em>Left: Shortest route recommendation &nbsp;&nbsp;|&nbsp;&nbsp; Right: Real-time weather conditions</em>
+</p>
 
 ---
 
