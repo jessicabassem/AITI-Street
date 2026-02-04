@@ -1,111 +1,153 @@
-# AiTi Street  
-### AI-Based Smart Traffic Management & Pollution Reduction System
+# 🚦 AiTi Street  
+## AI-Based Smart Traffic Management & Pollution Reduction System
 
-## 📌 Overview
-AiTi Street is a smart traffic control system designed to reduce traffic congestion, emergency response time, and air pollution in urban areas.  
-The system was developed as a prototype simulating **20th Street, Boulaq Al-Dakror, Cairo**, integrating **AI, IoT, and material science** solutions.
+---
 
-Our approach combines:
-- AI-controlled adaptive traffic lights
-- Emergency vehicle prioritization (green corridors)
-- Real-time traffic detection using computer vision
-- Siren detection using sound classification
-- Photocatalytic road materials for NOx reduction
-- A mobile application for route and weather guidance
+## 📌 Project Overview
+AiTi Street is an integrated smart traffic management system designed to address **traffic congestion, emergency response delays, and air pollution** in urban areas.  
+The prototype simulates **20th Street in Boulaq Al-Dakror, Cairo**, representing real traffic conditions in Egypt.
+
+The system integrates **Artificial Intelligence, IoT, material science, and mobile applications** to create a sustainable, adaptive, and efficient traffic solution.
+
+### 🖼️ Project Overview Images
+![System Overview](images/system_overview.jpg)
 
 ---
 
 ## 🎯 Problem Statement
-Traffic congestion in Egypt causes:
-- Severe delays and economic loss
-- Increased NOx and PM2.5 pollution
-- Higher accident rates
-- Delayed emergency vehicle response
+Traffic congestion in Egypt leads to:
+- Increased travel and waiting times  
+- Delayed emergency vehicle response  
+- Increased accident rates  
+- High NOx and air pollution levels  
 
-AiTi Street targets these issues by addressing **both the root cause (traffic flow)** and **its consequences (pollution and safety)**.
+Conventional traffic systems rely on fixed-time signals and cannot adapt to real-time congestion or emergencies.  
+AiTi Street introduces an **AI-driven adaptive system** that dynamically responds to traffic conditions.
+
+### 🖼️ Problem Context Images
+![Traffic Congestion](images/cairo_congestion.jpg)
 
 ---
 
 ## 🧠 System Architecture
-The system operates through synchronized modules:
+The system consists of synchronized modules:
+- AI-based vehicle and sound detection  
+- Arduino-controlled traffic lights  
+- Emergency vehicle prioritization  
+- Pollution-reducing road materials  
+- A mobile application for drivers  
 
-- **YOLOE-11S AI Model** for vehicle detection
-- **YAMNet** for emergency siren detection
-- **Arduino-controlled traffic lights**
-- **Green corridor activation** for emergency vehicles
-- **Flutter mobile application**
-- **N-doped TiO₂ photocatalytic cement** for pollution reduction
+All modules operate together to optimize traffic flow and safety.
 
----
-
-## 🚦 Features
-- Adaptive traffic light timing based on real-time congestion  
-- Emergency vehicle prioritization with response time of **2.26 seconds**  
-- AI accuracy up to **98.7%**  
-- Trip time reduction by **34.45%**  
-- NO pollution reduction up to **79%**  
-- Weather-aware route recommendation via mobile app  
+### 🖼️ System Architecture Diagram
+![System Architecture](images/system_architecture.jpg)
 
 ---
 
-## 🛠️ Technologies Used
-- **AI & ML:** YOLOE-11S, YAMNet  
-- **Hardware:** Arduino, DC motors, sensors  
-- **Mobile App:** Flutter  
-- **Materials Science:** N-doped TiO₂ photocatalytic cement  
-- **Dataset Tools:** Roboflow, data augmentation  
+## 🚗 Traffic Detection Using AI (YOLOE-11S)
+The system uses the **YOLOE-11S AI model** to detect:
+- Normal vehicles  
+- Emergency vehicles  
+
+The model processes real-time camera input to:
+- Measure congestion levels  
+- Control traffic light timing  
+- Trigger emergency vehicle priority  
+
+YOLOE-11S was selected for its **high accuracy, low latency, and robustness**.
+
+### 🖼️ YOLO Detection Images
+![YOLO Detection](images/yolo_detection.jpg)
+![YOLO Confusion Matrix](images/yolo_confusion_matrix.jpg)
 
 ---
 
-## 🧪 Dataset & Training
-- Initial dataset: **2,878 images**
-- After augmentation: **6,926 images**
-- Split:
-  - Training: 6,072
-  - Validation: 571
-  - Testing: 283
+## 🚨 Emergency Vehicle Prioritization (Green Corridor)
+When an emergency vehicle is detected:
+- All traffic lights turn red  
+- A green corridor opens in the emergency vehicle’s direction  
+- Normal traffic resumes after passage  
 
-Augmentation techniques included:
-- Motion blur
-- Zoom
-- Shear
-- Multi-exposure simulation
+This significantly reduces emergency response time.
+
+### 🖼️ Green Corridor Demonstration
+![Green Corridor](images/green_corridor.jpg)
 
 ---
 
-## 📊 Results
-| Metric | Result |
-|------|-------|
+## 🔊 Siren Detection Using YAMNet
+To enhance night-time performance, **YAMNet** sound classification is integrated.
+- Detects emergency sirens from up to 1–1.5 km  
+- Works alongside the vision model  
+- Improves detection reliability in low visibility  
+
+### 🖼️ Siren Detection Images
+![YAMNet Detection](images/yamnet_detection.jpg)
+![Sound Distance Comparison](images/sound_distance.jpg)
+
+---
+
+## 🛣️ Photocatalytic Road Material (N-doped TiO₂)
+To reduce pollution, **N-doped TiO₂** was incorporated into cement slabs.
+- Absorbs NOx pollutants under light  
+- Achieved up to **79% pollution reduction**  
+
+This allows roads to actively reduce air pollution.
+
+### 🖼️ Material Preparation & Testing
+![TiO2 Preparation](images/tio2_preparation.jpg)
+![Pollution Testing](images/pollution_test.jpg)
+
+---
+
+## 📱 Mobile Application (Flutter)
+A Flutter-based application was developed to:
+- Recommend shortest routes  
+- Display real-time weather conditions  
+- Reduce accidents caused by sudden weather changes  
+
+### 🖼️ Mobile App Interface
+![Route Recommendation](images/app_route.jpg)
+![Weather Display](images/app_weather.jpg)
+
+---
+
+## 🧪 Dataset & Training Process
+- Original dataset: 2,878 images  
+- After augmentation: 6,926 images  
+
+Augmentation techniques:
+- Motion blur  
+- Zoom  
+- Shear  
+- Multi-frame exposure  
+
+Dataset split:
+- Training: 6,072  
+- Validation: 571  
+- Testing: 283  
+
+### 🖼️ Dataset & Augmentation Images
+![Augmentation](images/augmentation.jpg)
+
+---
+
+## 📊 Results & Performance
+| Metric | Value |
+|------|------|
 | AI Accuracy | 98.7% |
-| Response Time | 2.26 s |
+| Response Time | 2.26 seconds |
 | Trip Time Reduction | 34.45% |
 | NO Reduction | 79% |
 
----
-
-## 🖼️ Prototype & System Images
-
-### Traffic Simulation Model
-![Traffic Model](images/traffic_model.jpg)
-
-### AI Vehicle Detection
-![YOLO Detection](images/yolo_detection.jpg)
-
-### Emergency Vehicle Detection
-![Emergency Detection](images/emergency_detection.jpg)
-
-### Mobile Application
-![App Interface](images/app_interface.jpg)
-
-### Photocatalytic Cement Preparation
-![TiO2 Preparation](images/tio2_preparation.jpg)
-
+### 🖼️ Results Visualization
+![Results Graph](images/results_graph.jpg)
 
 ---
 
 ## 🚀 Future Improvements
-- Replace YOLOE with Vision Transformers (ViT) for large-scale deployment  
-- Use higher-quality microphones for siren detection  
-- Increase N-doping efficiency using Melamine  
-- Deploy system at city scale  
+- Use Vision Transformers (ViT) for large-scale deployment  
+- Upgrade microphones for better siren detection  
+- Increase nitrogen doping efficiency  
+- Expand to city-wide implementation  
 
