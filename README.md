@@ -82,9 +82,9 @@ To enhance night-time performance, **YAMNet** sound classification is integrated
 - Improves detection reliability in low visibility  
 
 ### 🖼️ Siren Detection Images
-![YAMNet Detection](images/yamnet_detection.jpg)
+![YAMNet Detection](images/yamnet_detection_1.jpg)
 ![Sound Distance Comparison](images/sound_distance.jpg)
-
+![YAMNet Detection](images/yamnet_detection.jpg)
 ---
 
 ## 🛣️ Photocatalytic Road Material (N-doped TiO₂)
@@ -141,7 +141,7 @@ Dataset split:
 
 ### 🖼️ Results Visualization
 ![Results Graph](images/results_graph.jpg)
-
+![Results Graph](images/results_graph_2.jpg)
 ---
 
 ## 🚀 Future Improvements
