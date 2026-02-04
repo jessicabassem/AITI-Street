@@ -79,9 +79,18 @@ To enhance night-time performance, **YAMNet** sound classification is integrated
 - Improves detection reliability in low visibility  
 
 ### 🖼️ Siren Detection Images
+
 ![YAMNet Detection](images/yamnet_detection_1.jpg)
-![Sound Distance Comparison](images/sound_distance.jpg)
-![YAMNet Detection](images/yamnet_detection.jpg)
+
+<p align="center">
+  <img src="images/sound_distance.jpg" width="260" />
+  <img src="images/yamnet_detection.jpg" width="260" />
+</p>
+
+<p align="center">
+  <em>Left: Sound distance comparison &nbsp;&nbsp;|&nbsp;&nbsp; Right: YAMNet siren detection</em>
+</p>
+
 ---
 
 ## 🛣️ Photocatalytic Road Material (N-doped TiO₂)
@@ -92,7 +101,11 @@ To reduce pollution, **N-doped TiO₂** was incorporated into cement slabs.
 This allows roads to actively reduce air pollution.
 
 ### 🖼️ Material Preparation & Testing
-![TiO2 Preparation](images/5870730337107774257_(1).jpg)
+
+<p align="center">
+  <img src="images/5870730337107774257_(1).jpg" width="350" />
+</p>
+
 
 ---
 
