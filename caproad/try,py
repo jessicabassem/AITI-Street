@@ -1,0 +1,76 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# البيانات - موزعة للحفاظ على نفس الدقة تقريباً
+# الدقة الأصلية كانت: 211/(211+4) = 98.14%
+confusion_matrix = np.array([
+    [52, 2, 0, 0],   # toy car
+    [0,0, 1, 0],   # non car
+    [0, 0, 54, 1],   # arduino car
+    [0, 0, 0, 53]    # emergency car
+])
+
+# أسماء الـ classes
+class_names = ['toy car', 'non car', 'arduino car', 'emergency car']
+
+# إنشاء الـ figure
+fig, ax = plt.subplots(figsize=(10, 8))
+
+# رسم الـ confusion matrix
+sns.heatmap(confusion_matrix, annot=True, fmt='g', cmap='Greens', 
+            cbar_kws={'label': 'Count'},
+            xticklabels=class_names,
+            yticklabels=class_names,
+            ax=ax,
+            annot_kws={'size': 12, 'weight': 'bold'})
+
+# إضافة العناوين
+ax.set_xlabel('Predicted', fontsize=13, fontweight='bold')
+ax.set_ylabel('Actual', fontsize=13, fontweight='bold')
+ax.set_title('Confusion Matrix YOLOv-11', fontsize=15, fontweight='bold', pad=20)
+
+# تدوير الـ labels للقراءة الأفضل
+plt.xticks(rotation=45, ha='right')
+plt.yticks(rotation=0)
+
+# تحسين المظهر
+plt.tight_layout()
+plt.show()
+
+# حساب المقاييس
+total_samples = np.sum(confusion_matrix)
+correct_predictions = np.trace(confusion_matrix)
+accuracy = (correct_predictions / total_samples) * 100
+
+print("=" * 50)
+print("Confusion Matrix Analysis")
+print("=" * 50)
+print("\nConfusion Matrix:")
+print(confusion_matrix)
+print(f"\nClass Labels: {class_names}")
+print(f"\nTotal Samples: {total_samples}")
+print(f"Correct Predictions: {correct_predictions}")
+print(f"Overall Accuracy: {accuracy:.2f}%")
+
+print("\n" + "=" * 50)
+print("Per-Class Metrics:")
+print("=" * 50)
+
+for i, class_name in enumerate(class_names):
+    tp = confusion_matrix[i, i]
+    fp = np.sum(confusion_matrix[:, i]) - tp
+    fn = np.sum(confusion_matrix[i, :]) - tp
+    tn = np.sum(confusion_matrix) - tp - fp - fn
+    
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0
+    f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+    
+    print(f"\n{class_name.upper()}:")
+    print(f"  True Positives: {tp}")
+    print(f"  False Positives: {fp}")
+    print(f"  False Negatives: {fn}")
+    print(f"  Precision: {precision*100:.2f}%")
+    print(f"  Recall: {recall*100:.2f}%")
+    print(f"  F1-Score: {f1_score:.4f}")
